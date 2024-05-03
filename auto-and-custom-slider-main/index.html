@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   <!-------------------------------------------------
+       Title
+    -------------------------------------------------->
+   <title>Auto And Custom Slider</title>
+
+
+   <!-------------------------------------------------
+       Link Favicon
+    -------------------------------------------------->
+   <link rel="icon" type="image/png" href="assets/images/img-1.jpg">
+
+
+   <!---------------------------------------------------
+       Link External Custom Style Sheets
+    ----------------------------------------------------->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onload="change()">
+
+   <!---------------------------------------------------
+       Wrapper Start
+   ----------------------------------------------------->
+   <div class="wrapper">
+
+      <!---------------------------------------------------
+       Video In Background Start
+      ----------------------------------------------------->
+      <video autoplay loop muted>
+         <source src="assets/videos/v.mp4" type="video/mp4">
+      </video>
+      <!---------------------------------------------------
+       Video In Background End
+      ----------------------------------------------------->
+
+
+      <!---------------------------------------------------
+         Overlay On Video Start
+      ----------------------------------------------------->
+      <div class="overlay">
+
+
+         <!---------------------------------------------------
+            Input Radios Buttons Start
+         ----------------------------------------------------->
+         <input type="radio" name="active" id="radio-1">
+         <input type="radio" name="active" id="radio-2">
+         <input type="radio" name="active" id="radio-3">
+         <input type="radio" name="active" id="radio-4">
+         <input type="radio" name="active" id="radio-5">
+         <!---------------------------------------------------
+            Input Radios Buttons End
+         ----------------------------------------------------->
+
+
+         <!---------------------------------------------------
+            Slider Container Start
+         ----------------------------------------------------->
+         <div class="slider-container">
+
+
+            <!---------------------------------------------------
+               Images Container Start
+            ----------------------------------------------------->
+            <div class="images-container">
+               <img src="assets/images/i-1.jpg" alt="nature">
+               <img src="assets/images/i-2.jpg" alt="nature">
+               <img src="assets/images/i-3.jpg" alt="nature">
+               <img src="assets/images/i-4.jpg" alt="nature">
+               <img src="assets/images/i-5.jpg" alt="nature">
+            </div>
+            <!---------------------------------------------------
+               Images Container End
+            ----------------------------------------------------->
+
+         </div>
+         <!---------------------------------------------------
+            Slider Container End
+         ----------------------------------------------------->
+
+         <!---------------------------------------------------
+            Control Indicators Start
+         ----------------------------------------------------->
+         <div class="control-indicators">
+            <label for="radio-1" class="indicator indicator1"></label>
+            <label for="radio-2" class="indicator indicator2"></label>
+            <label for="radio-3" class="indicator indicator3"></label>
+            <label for="radio-4" class="indicator indicator4"></label>
+            <label for="radio-5" class="indicator indicator5"></label>
+         </div>
+         <!---------------------------------------------------
+            Control Indicators End
+         ----------------------------------------------------->
+
+      </div>
+      <!---------------------------------------------------
+         Overlay On Video End 
+      ----------------------------------------------------->
+
+   </div>
+   <!---------------------------------------------------
+       Wrapper End
+   ----------------------------------------------------->
+
+
+   <!---------------------------------------------------
+       Link External Custom Js File
+   ----------------------------------------------------->
+   <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

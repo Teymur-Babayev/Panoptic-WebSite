@@ -1,0 +1,215 @@
+/**********************************************************
+  Reset Default Properties Start
+**********************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* Now 1rem = 1em = 10px */
+
+  overflow: hidden;
+}
+
+/**********************************************************
+  Reset Default Properties End
+**********************************************************/
+
+
+
+/**********************************************************
+  Variables Start
+**********************************************************/
+:root {
+
+  /* Theme Colors */
+  --black: #000;
+  --white: #fff;
+  --border: rgba(255, 255, 255, 0.228);
+  --indicatorHover: #011227;
+  --numberOfImgs: 5;
+}
+
+/**********************************************************
+  Wrapper Start
+**********************************************************/
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+/**********************************************************
+  Video Start
+**********************************************************/
+.wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/**********************************************************
+  Overlay Start
+**********************************************************/
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/**********************************************************
+  Overlay End
+**********************************************************/
+
+
+/**********************************************************
+  Radio Buttons
+**********************************************************/
+input[type="radio"] {
+  display: none;
+}
+
+
+/**********************************************************
+  Slider Container Start
+**********************************************************/
+.slider-container {
+  max-width: 800px;
+  width: 80%;
+  aspect-ratio: 1000/667;
+  overflow: hidden;
+  border: 2rem solid var(--border);
+  box-shadow: 8px 8px 10px #0000002e, -8px -8px 10px #00000028;
+  transition: all .3s linear;
+  cursor: pointer;
+}
+
+@media (hover:hover) {
+  .slider-container:hover {
+    border-color: var(--white);
+  }
+}
+
+
+/**********************************************************
+   Images Container Start
+**********************************************************/
+.images-container {
+  width: calc(100% * var(--numberOfImgs));
+  height: 100%;
+  display: flex;
+  animation: animate 15s linear infinite alternate;
+  transition: all .4s linear;
+}
+
+
+.images-container img {
+  width: calc(100% / var(--numberOfImgs));
+  height: 100%;
+}
+
+
+/**********************************************************
+   Control Indicators Start
+**********************************************************/
+.control-indicators {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.indicator {
+  width: 2rem;
+  background-color: var(--border);
+  box-shadow: 2px 2px 5px #00000070;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+
+@media (hover:hover) {
+  .indicator:hover {
+    background-color: var(--indicatorHover);
+  }
+}
+
+/**********************************************************
+   Change Images  And Indicators Colors When Radio Checked
+**********************************************************/
+#radio-1:checked~.slider-container .images-container {
+  margin-left: 0;
+}
+
+#radio-1:checked~.control-indicators .indicator1 {
+  background-color: var(--indicatorHover);
+}
+
+#radio-2:checked~.slider-container .images-container {
+  margin-left: -100%;
+}
+
+#radio-2:checked~.control-indicators .indicator2 {
+  background-color: var(--indicatorHover);
+}
+
+#radio-3:checked~.slider-container .images-container {
+  margin-left: -200%;
+}
+
+#radio-3:checked~.control-indicators .indicator3 {
+  background-color: var(--indicatorHover);
+}
+
+#radio-4:checked~.slider-container .images-container {
+  margin-left: -300%;
+}
+
+#radio-4:checked~.control-indicators .indicator4 {
+  background-color: var(--indicatorHover);
+}
+
+#radio-5:checked~.slider-container .images-container {
+  margin-left: -400%;
+}
+
+#radio-5:checked~.control-indicators .indicator5 {
+  background-color: var(--indicatorHover);
+}
+
+
+
+
+
+/**********************************************************
+   Media Queries
+**********************************************************/
+
+@media only screen and (max-width:768px) {
+  html {
+    font-size: 48%;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+@media only screen and (max-width:300px) {
+  html {
+    font-size: 25%;
+  }
+}
